@@ -8,7 +8,7 @@ class Jungle extends Room
     Jungle(World world)
     {
         super(world);
-    ;
+        image= new Image("jungle.jpg");
         currentScript = 1;
         hasSpoon = true;
         hasRevealedDesert = false;
