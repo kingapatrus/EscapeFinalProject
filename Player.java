@@ -1,13 +1,13 @@
 class Player
 {
     String name;
-    boolean hasSpoon;
+    boolean hasKey;
     World world;
     
     Player(World world)
     {
         this.name = "";
-        this.hasSpoon = false;
+        this.hasKey = false;
         this.world = world;
     }
     

@@ -1,8 +1,8 @@
 import javafx.scene.image.Image;
 
-class Desert extends Room
+class Color extends Room
 {
-    Desert(World world)
+    Color(World world)
     {
         super(world);
         this.image = new Image("desert.jpg");
@@ -13,7 +13,7 @@ class Desert extends Room
     {
         if (currentScript == 1)
         {
-            System.out.println("You have entered a desert. The sun is hot. The sand is sandy. You are beginning to feel faint.");
+            System.out.println(" The door opens up to another room, this one full of colaging colors. You feel discouraged and exausted..");
             System.out.println("A cool and refreshing breeze blows from the west.");
             System.out.println("You can LOOK around or go NORTH back to the jungle.");
             System.out.println("What do you want to do?");
@@ -37,7 +37,7 @@ class Desert extends Room
                 System.out.println("You walk across the dunes heading back to the jungle.");
                 System.out.println("Press Enter to continue.");
                 currentScript = 1;
-                world.moveTo(world.jungle);
+                world.moveTo(world.chair);
             }
             else
             {
@@ -52,7 +52,7 @@ class Desert extends Room
                 System.out.println("You stumble across the desert following the sweet smell of ice cream in the distance.");
                 System.out.println("Press Enter to continue.");
                 currentScript = 1;
-                world.moveTo(world.dessert);
+                world.moveTo(world.bowling);
             }
             else if (lastReply.toUpperCase().equals("NORTH"))
             {
@@ -60,7 +60,7 @@ class Desert extends Room
                 System.out.println("You walk across the dunes heading back to the jungle.");
                 System.out.println("Press Enter to continue.");
                 currentScript = 1;
-                world.moveTo(world.jungle);
+                world.moveTo(world.chair);
             }
             else
             {

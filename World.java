@@ -1,30 +1,30 @@
 class World
 {
     //Rooms
-    Jungle jungle;
-    Desert desert;
-    Dessert dessert;
+    Chair chair;
+    Color color;
+    Bowling bowling;
     
     Room currentRoom;
     Player player;
     
     World()
     {
-        jungle = new Jungle(this);
-        desert = new Desert(this);
-        dessert = new Dessert(this);
+        chair = new Chair(this);
+        color = new Color(this);
+        bowling = new Bowling(this);
         
-        this.currentRoom = jungle;
+        this.currentRoom = chair;
         player = new Player(this);
     }
 
     void restart()
     {
-        jungle = new Jungle(this);
-        desert = new Desert(this);
-        dessert = new Dessert(this);
+        chair = new Chair(this);
+        color = new Color(this);
+        bowling = new Bowling(this);
         
-        this.currentRoom = jungle;
+        this.currentRoom = chair;
         player = new Player(this);
         
     }
