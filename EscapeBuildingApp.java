@@ -14,7 +14,7 @@ import java.io.PrintStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
-public class AdventureApp extends Application
+public class EscapeBuildingApp extends Application
 {
     ImageView view;
     TextArea output;
