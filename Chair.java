@@ -58,7 +58,11 @@ class Chair extends Room
         }
         if (currentScript == 3)
         {
-            if (lastReply.toUpperCase().equals("LOOK"))
+            if (lastReply.toUpperCase().equals("INVESTIGATE"))
+            {
+                System.out.println("");
+            }
+            else if (lastReply.toUpperCase().equals("LOOK"))
             {
                 System.out.println("Trying to escape would've been silly of you so soon. You don't even know where you are yet.");
                 System.out.println(" You take a look around. You are in a medium sized room. The walls are all different monotone shades. White, Black, Grey, and one is a deep Maroon.");
@@ -115,7 +119,8 @@ class Chair extends Room
         }
         
         if (currentScript == 4)
-        {            if (lastReply.toUpperCase().equals("BREAK"))
+        {            
+            if (lastReply.toUpperCase().equals("BREAK"))
             {
                 System.out.println("The restraints are actually quite simple. There is a little hole for the key that you can easily break free from.");
                 System.out.println("You grab that bobby pin and go to town on the locks.");
