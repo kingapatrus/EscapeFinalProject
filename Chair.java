@@ -39,7 +39,7 @@ class Chair extends Room
                 System.out.println("You start investigating the restraints around your arms and legs. You see that there is a little hole on the side. You contort your body to search through your pocket for a bobby pin.");
                 System.out.println("While you are trying to sort through your pockets for something to escape with, you feel a foreign cold object.");
                 System.out.println("It's a copper key. This keeps getting stranger and stranger.");
-                world.player.hasKey = true; 
+                world.player.hasKey = true;
                 System.out.println("You put the key back in your pocket and grab the bobby pin. Maybe the key will help you escape.");
                 System.out.println("You can BREAK the restraints or LOOK around the room.");
                 System.out.println("What do you want to do?");
@@ -53,7 +53,7 @@ class Chair extends Room
             {
                 System.out.println("You can also PANIC if you are overwhelmed.");
             }
-            System.out.println("You can SCREAM or EXPLORE.");
+            System.out.println("You can SCREAM or INVESTIGATE.");
             System.out.println("What do you want to do?");
         }
         if (currentScript == 3)
@@ -83,7 +83,7 @@ class Chair extends Room
                 world.player.hasKey = true;
                 System.out.println("You can BREAK the restraints or LOOK around the room.");
                 System.out.println("What do you want to do?");
-                currentScript = 4;
+                currentScript = 3;
                  
             }
 
@@ -106,7 +106,7 @@ class Chair extends Room
                 System.out.println("Press Enter to continue.");
                 world.restart();
             }
-            else
+            else 
             {
                System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
                 if (hasRevealedColor)

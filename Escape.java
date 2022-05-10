@@ -1,11 +1,11 @@
 import javafx.scene.image.Image;
 
-class Bowling extends Room
+class Escape extends Room
 {
-    Bowling(World world)
+    Escape(World world)
     {
         super(world);
-        this.image = new Image("bowling .jpg");
+        this.image = new Image("escape.jpg");
         this.currentScript = 1;
     }
 

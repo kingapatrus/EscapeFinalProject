@@ -5,7 +5,7 @@ class Color extends Room
     Color(World world)
     {
         super(world);
-        this.image = new Image("desert.jpg");
+        this.image = new Image("color.jpg");
         this.currentScript = 1;
     }
 
@@ -25,7 +25,7 @@ class Color extends Room
             {
                 System.out.println("You decide on taking a look around this room. It is blindlingly bright. The walls are collauges of colors and shapes..");
                 System.out.println("Are they moving or are you just getting dizzy?");
-                System.out.println("Where could the next clue for this room be? ");
+                System.out.println("OH look its the clue ");
                 System.out.println("Hmmm... Maybe the shapes are the puzzle?.");
                 System.out.println("You can MOVE closer to the walls and get a close look, or ASK the voice in the ceiling for help.");
                 System.out.println("What do you want to do?");
