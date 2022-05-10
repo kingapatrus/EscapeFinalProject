@@ -104,7 +104,7 @@ class Chair extends Room
             }
             else
             {
-                System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
+               System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
                 if (hasRevealedColor)
             {
                 System.out.println("You can also PANIC if you are overwhelmed.");
@@ -141,7 +141,7 @@ class Chair extends Room
                 System.out.println("Do want to take a closer to the frame hanging on the maroon wall infront of you?");
                 System.out.println("You can BREAK free and look at the wall, or PANIC because this place is freaky.");
                 System.out.println("What do you want to do?");
-                currentScript = 5l
+                currentScript = 5;
             }
             else
             {
