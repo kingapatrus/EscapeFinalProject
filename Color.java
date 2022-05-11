@@ -59,7 +59,7 @@ class Color extends Room
                 System.out.println("YAY YOU DID IT. YOu try to push the door this time and it creacks open, the room beyond is completely dark though You hesitantly step through the threshold.");
                 System.out.println("Press Enter to continue.");
                 currentScript = 1;
-                world.moveTo(world.bowling);
+                world.moveTo(world.escape);
             }
             else if (lastReply.toUpperCase().equals("BACK"))
             {

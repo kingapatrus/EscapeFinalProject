@@ -3,7 +3,7 @@ class World
     //Rooms
     Chair chair;
     Color color;
-    Bowling bowling;
+    Escape escape;
     
     Room currentRoom;
     Player player;
@@ -12,7 +12,7 @@ class World
     {
         chair = new Chair(this);
         color = new Color(this);
-        bowling = new Bowling(this);
+        escape = new Escape(this);
         
         this.currentRoom = chair;
         player = new Player(this);
@@ -22,7 +22,7 @@ class World
     {
         chair = new Chair(this);
         color = new Color(this);
-        bowling = new Bowling(this);
+        escape = new Escape(this);
         
         this.currentRoom = chair;
         player = new Player(this);

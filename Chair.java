@@ -4,7 +4,6 @@ class Chair extends Room
 {
     boolean hasRevealedColor;
     int lives;
-
     Chair(World world)
     {
         super(world);
@@ -12,7 +11,6 @@ class Chair extends Room
         currentScript = 1;
         hasRevealedColor = false;
     }
-
     void readScript(String lastReply)
     { 
         if (currentScript == 1)
@@ -44,25 +42,7 @@ class Chair extends Room
                 System.out.println("What do you want to do?");
                 currentScript = 3;
             }
-            /*else 
-            {
-
-
-                System.out.println("You can also PANIC if you are overwhelmed.");
-            }
-            System.out.println("You can SCREAM or INVESTIGATE.");
-            System.out.println("What do you want to do?");
-
-                System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
-                if (hasRevealedColor)
-                {
-                    System.out.println("You can also PANIC if you are overwhelmed.");
-                }
-                System.out.println("You can SCREAM or EXPLORE.");
-                System.out.println("What do you want to do?");
-            }*/
-        }
-
+                   }
         if (currentScript == 3)
         {
             if (lastReply.toUpperCase().equals("LOOK"))
@@ -121,7 +101,6 @@ class Chair extends Room
                 System.out.println("What do you want to do?");
             }*/
         }
-
         if (currentScript == 4)
         {            
             if (lastReply.toUpperCase().equals("BREAK"))
@@ -136,6 +115,7 @@ class Chair extends Room
             else if (lastReply.toUpperCase().equals("PANIC"))
             {
                 System.out.println("AHHHHHHHHH!");
+                image = new Image("gameover.jpg");
                 System.out.println("HELP ME!! WHERE AM I!!");
                 System.out.println("Oh no. Someone came in and subdued you because of your unpredictable state.");
                 System.out.println("You are very dead. Game over.");
@@ -152,14 +132,10 @@ class Chair extends Room
                 System.out.println("What do you want to do?");
                 currentScript = 5;
             }
-            /*else
-            {
-                System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
-                System.out.println("You can  or .");
-                System.out.println("What do you want to do?");
-            }*/
         }
     }
+
+            
 }
 
 
@@ -183,7 +159,31 @@ System.out.println("");
 System.out.println("");
 currentScript = 5;
 }
-else
+
+
+
+
+
+
+ /*else 
+            {
+
+
+                System.out.println("You can also PANIC if you are overwhelmed.");
+            }
+            System.out.println("You can SCREAM or INVESTIGATE.");
+            System.out.println("What do you want to do?");
+
+                System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
+                if (hasRevealedColor)
+                {
+                    System.out.println("You can also PANIC if you are overwhelmed.");
+                }
+                System.out.println("You can SCREAM or EXPLORE.");
+                System.out.println("What do you want to do?");
+            }*/
+        
+/*else
 {
 System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
 System.out.println("You can  or .");
