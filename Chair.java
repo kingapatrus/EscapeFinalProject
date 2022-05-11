@@ -8,10 +8,9 @@ class Chair extends Room
     Chair(World world)
     {
         super(world);
-        image = new Image("desert.jpeg");
+        image = new Image("room.jpg");
         currentScript = 1;
         hasRevealedColor = false;
-        lives = 3;
     }
 
     void readScript(String lastReply)
@@ -48,10 +47,12 @@ class Chair extends Room
             /*else 
             {
 
+
                 System.out.println("You can also PANIC if you are overwhelmed.");
             }
             System.out.println("You can SCREAM or INVESTIGATE.");
             System.out.println("What do you want to do?");
+
                 System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
                 if (hasRevealedColor)
                 {
@@ -84,8 +85,9 @@ class Chair extends Room
                 world.player.hasKey = true;
                 System.out.println("You can BREAK the restraints or LOOK around the room.");
                 System.out.println("What do you want to do?");
+
                 currentScript = 3;
-                 
+
             }
 
             else if (lastReply.toUpperCase().equals("BREAK"))
@@ -99,6 +101,7 @@ class Chair extends Room
             }
             else if (lastReply.toUpperCase().equals("PANIC"))
             {
+                image = new Image("gameover.jpg");
                 System.out.println("AHHHHHHHHH!");
                 System.out.println("HELP ME!! WHERE AM I!!");
                 System.out.println("Oh no. Someone came in and subdued you because of your unpredictable state.");
