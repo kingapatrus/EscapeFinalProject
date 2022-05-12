@@ -1,5 +1,4 @@
 import javafx.scene.image.Image;
-,
 class Over extends Room
 {
     Over(World world)
@@ -10,7 +9,7 @@ class Over extends Room
     }
     void readScript(String lastReply)
     {
-        if(currentScript = 1)
+        if(currentScript == 1)
         {
             image = new Image("gameover.jpg");
                 System.out.println("AHHHHHHHHH!");
@@ -19,7 +18,7 @@ class Over extends Room
                 System.out.println("You are very dead. Game over.");
                 System.out.println("A strange shadowy figure comes in and examines your body. 'Test Subject 504 was too weak. Bring in 505.'");
                 System.out.println("Press Enter to continue.");
-                
+                world.restart();
         }
     }
 }

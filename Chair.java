@@ -2,14 +2,14 @@ import javafx.scene.image.Image;
 
 class Chair extends Room
 {
-    boolean hasRevealedColor;
+    boolean hasRevealedEscape;
     int lives;
     Chair(World world)
     {
         super(world);
         image = new Image("room.jpg");
         currentScript = 1;
-        hasRevealedColor = false;
+        hasRevealedEscape = false;
     }
     void readScript(String lastReply)
     { 
@@ -66,7 +66,7 @@ class Chair extends Room
                 System.out.println("You can BREAK the restraints or LOOK around the room.");
                 System.out.println("What do you want to do?");
 
-                currentScript = 3;
+                currentScript = 4;
 
             }
 
@@ -75,13 +75,13 @@ class Chair extends Room
                 System.out.println("The restraints are actually quite simple. There is a little hole for the key that you can easily break free from.");
                 System.out.println("You grab that bobby pin and go to town on the locks.");
                 System.out.println("Yes! You got all the restraints free!");
-                System.out.println("Now you can PONDER where the clue might be, or WAIT and catch your bearings.");
-                System.out.println("What do you want to do?");
+                System.out.println("Now you can MOVE to the box to escape.");
+                hasRevealedEscape = true; 
                 currentScript = 4;
             }
             else if (lastReply.toUpperCase().equals("PANIC"))
             {
-                world.moveTo(world.color);
+                world.moveTo(world.over);
             }
         }
         if (currentScript == 4)
@@ -91,20 +91,21 @@ class Chair extends Room
                 System.out.println("The restraints are actually quite simple. There is a little hole for the key that you can easily break free from.");
                 System.out.println("You grab that bobby pin and go to town on the locks.");
                 System.out.println("Yes! You got all the restraints free!");
-                System.out.println("Now you can PONDER where the clue might be, or WAIT and catch your bearings.");
-                System.out.println("What do you want to do?");
+                System.out.println("Now you can MOVE to the box to escape.");
                 currentScript = 5;
+            }
+            else if (lastReply.toUpperCase().equals("MOVE") && hasRevealedEscape == true)
+            {
+                System.out.println("You made it, you freed yourself from the restraints, you completed the clue in the box which you unlocked with the key.");
+                System.out.println("Now all you need to do is open the door with the key, and leave");
+                System.out.println("You insert the key, turn it and reach for the door knob. You turn it and are blinded by the bright light");
+                System.out.println("Press Enter to continue.");
+                currentScript = 6;
+                world.moveTo(world.escape);
             }
             else if (lastReply.toUpperCase().equals("PANIC"))
             {
-                image = new Image("gameover.jpg");
-                System.out.println("AHHHHHHHHH!");
-                System.out.println("HELP ME!! WHERE AM I!!");
-                System.out.println("Oh no. Someone came in and subdued you because of your unpredictable state.");
-                System.out.println("You are very dead. Game over.");
-                System.out.println("A strange shadowy figure comes in and examines your body. 'Test Subject 504 was too weak. Bring in 505.'");
-                System.out.println("Press Enter to continue.");
-                //world.restart();
+                world.moveTo(world.over);
             }
             else if(lastReply.toUpperCase().equals("LOOK"))
             {
@@ -115,10 +116,21 @@ class Chair extends Room
                 System.out.println("What do you want to do?");
                 currentScript = 5;
             }
+          }
+          if (currentScript == 5 )
+             {
+            if (lastReply.toUpperCase().equals("MOVE") )
+            {
+                System.out.println("You made it, you freed yourself from the restraints, you completed the clue in the box which you unlocked with the key.");
+                System.out.println("Now all you need to do is open the door with the key, and leave");
+                System.out.println("You insert the key, turn it and reach for the door knob. You turn it and are blinded by the bright light");
+                System.out.println("Press Enter to continue.");
+                currentScript = 6;
+                world.moveTo(world.escape);
+           }
         }
-    }
 
-            
+    }
 }
 
 

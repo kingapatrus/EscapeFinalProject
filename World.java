@@ -2,7 +2,6 @@ class World
 {
     //Rooms
     Chair chair;
-    Color color;
     Escape escape;
     Over over;
     
@@ -12,7 +11,6 @@ class World
     World()
     {
         chair = new Chair(this);
-        color = new Color(this);
         escape = new Escape(this);
         over = new Over(this);
         
@@ -23,7 +21,6 @@ class World
     void restart()
     {
         chair = new Chair(this);
-        color = new Color(this);
         escape = new Escape(this);
         over = new Over(this);
         
@@ -35,5 +32,6 @@ class World
     void moveTo(Room room)
     {
         this.currentRoom = room;
+        
     }
 }
