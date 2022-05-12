@@ -4,6 +4,7 @@ class World
     Chair chair;
     Color color;
     Escape escape;
+    Over over;
     
     Room currentRoom;
     Player player;
@@ -13,6 +14,7 @@ class World
         chair = new Chair(this);
         color = new Color(this);
         escape = new Escape(this);
+        over = new Over(this);
         
         this.currentRoom = chair;
         player = new Player(this);
@@ -23,6 +25,7 @@ class World
         chair = new Chair(this);
         color = new Color(this);
         escape = new Escape(this);
+        over = new Over(this);
         
         this.currentRoom = chair;
         player = new Player(this);

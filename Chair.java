@@ -81,25 +81,8 @@ class Chair extends Room
             }
             else if (lastReply.toUpperCase().equals("PANIC"))
             {
-                image = new Image("gameover.jpg");
-                System.out.println("AHHHHHHHHH!");
-                System.out.println("HELP ME!! WHERE AM I!!");
-                System.out.println("Oh no. Someone came in and subdued you because of your unpredictable state.");
-                System.out.println("You are very dead. Game over.");
-                System.out.println("A strange shadowy figure comes in and examines your body. 'Test Subject 504 was too weak. Bring in 505.'");
-                System.out.println("Press Enter to continue.");
-                world.restart();
+                world.moveTo(world.color);
             }
-            /*else
-            {
-               System.out.println("Hmm... I'm not sure what '" + lastReply + "' means.");
-                if (hasRevealedColor)
-                {
-                    System.out.println("You can also PANIC if you are overwhelmed.");
-                }
-                System.out.println("You can SCREAM or INVESTIGATE.");
-                System.out.println("What do you want to do?");
-            }*/
         }
         if (currentScript == 4)
         {            
@@ -114,14 +97,14 @@ class Chair extends Room
             }
             else if (lastReply.toUpperCase().equals("PANIC"))
             {
-                System.out.println("AHHHHHHHHH!");
                 image = new Image("gameover.jpg");
+                System.out.println("AHHHHHHHHH!");
                 System.out.println("HELP ME!! WHERE AM I!!");
                 System.out.println("Oh no. Someone came in and subdued you because of your unpredictable state.");
                 System.out.println("You are very dead. Game over.");
                 System.out.println("A strange shadowy figure comes in and examines your body. 'Test Subject 504 was too weak. Bring in 505.'");
                 System.out.println("Press Enter to continue.");
-                world.restart();
+                //world.restart();
             }
             else if(lastReply.toUpperCase().equals("LOOK"))
             {
